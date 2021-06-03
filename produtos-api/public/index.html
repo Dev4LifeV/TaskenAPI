@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>API Tasken - Documentação</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div id="div-principal">
+            <div>
+                <h1 id="boas-vindas">Bem-vindo a API Tasken!</h1>
+                <img id="logo-tasken" src="logo-tasken.png" alt="logo-tasken">
+            </div>
+
+            <div id="div-subtitulo">
+                <h4>
+                    API desenvolvida para o desafio do processo seletivo referente a vaga de Desenvolvedor Node.js Júnior.<br>
+                    Esta API consiste em um cadastro de produtos baseada em CRUD (Create - Read - Update - Delete).<br>
+                    A API fora desenvolvida em ambiente Node.js utilizando o framework NestJS fazendo uso da linguagem TypeScript e utilizando um ORM, cujo seria o Sequelize.
+                </h4>
+            </div>
+            <div id="div-corpo">
+
+                <div>
+                    <h1>GET /produtos</h1>
+
+                    <h2>Descrição</h2>
+                    <p>
+                        Retorna todos os produtos do banco de dados 
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table class="tabela">
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>GET /id/:id</h1>
+
+                    
+                    <h2>Descrição</h2>
+                    <p>
+                        Realiza uma busca no banco de dados e retorna o produto a partir do ID dado
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <table>
+                        <thead>
+                            <tr class="tr1">
+                                <td>Nome</td>
+                                <td>Requerido</td>
+                                <td>Descrição</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="tr2">
+                                <td>id</td> 
+                                <td>Requerido</td>
+                                <td>ID do respectivo produto cadastrado</td>
+                            </tr>
+                        </tbody>
+                    </table>         
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>GET /produtos/semEstoque</h1>
+
+                    
+                    <h2>Descrição</h2>
+                    <p>
+                        Retorna apenas os produtos que possuem estoques menores ou iguais a 5 (cinco)
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>         
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>GET /produtos/maiorEstoque</h1>
+
+                    
+                    <h2>Descrição</h2>
+                    <p>
+                        Retorna apenas o produto que possui o maior estoque
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>         
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>GET /produtos/menorEstoque</h1>
+
+                    
+                    <h2>Descrição</h2>
+                    <p>
+                        Retorna apenas o produto que possui o menor estoque
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>         
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>GET /produtos/quantidade</h1>
+
+                    
+                    <h2>Descrição</h2>
+                    <p>
+                        Retorna a quantidade de produtos cadastrados
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>         
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>POST /produtos</h1>
+
+                    <h2>Descrição</h2>
+                    <p>
+                        Cadastra um novo produto no banco de dados
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">201</span> para sucessão do retorno</div>
+                        <div class="linha"><span class="status-erro">500</span> erro no servidor</div>
+                        <span class="status-proibido">403</span> os dados enviados do produto são inválidos 
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>
+                    
+                    <h2>Exemplo do body</h2>
+                    <div class="exemplo-json">
+                        <div>
+                            {
+                                <div class="identacao-json">
+                                    <span class="chave-json">"nomeProduto"</span>: <span class="valor-json-string">"Nome do produto"</span>,<br>
+                                    <span class="chave-json">"fabricante"</span>: <span class="valor-json-string">"Nome do fabricante"</span>,<br>
+                                    <span class="chave-json">"quantidade"</span>: <span class="valor-json-number">0</span>,<br>
+                                    <span class="chave-json">"valor"</span>: <span class="valor-json-number">0.00</span><br>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>PUT /produtos</h1>
+
+                    <h2>Descrição</h2>
+                    <p>
+                        Realiza a edição do produto a partir de seu id e retorna o número de linhas que foram editadas
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <div class="linha"><span class="status-erro">500</span> erro no servidor</div>
+                        <span class="status-proibido">403</span> os dados enviados do produto são inválidos 
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <p>
+                        Não são necessários quaisquer parâmetros
+                    </p>         
+
+                    <h2>Exemplo do body</h2>
+                    <div class="exemplo-json">
+                        <div>
+                            {
+                                <div class="identacao-json">
+                                    <span class="chave-json">"id"</span>: <span class="valor-json-number">1</span>,<br>
+                                    <span class="chave-json">"nomeProduto"</span>: <span class="valor-json-string">"Nome do produto"</span>,<br>
+                                    <span class="chave-json">"fabricante"</span>: <span class="valor-json-string">"Nome do fabricante"</span>,<br>
+                                    <span class="chave-json">"quantidade"</span>: <span class="valor-json-number">0</span>,<br>
+                                    <span class="chave-json">"valor"</span>: <span class="valor-json-number">0.00</span><br>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div>
+                    <h1>DELETE /produtos/:id</h1>
+
+                    <h2>Descrição</h2>
+                    <p>
+                        Realiza uma busca no banco de dados e deleta o produto a partir do ID dado
+                    </p>
+
+                    <h2>URL</h2>
+
+                    <div class="url">URL</div>
+
+                    <h2>Informações de recursos</h2>
+                    <table>
+                        <tbody>
+                            <tr class="tr1">
+                                <td>Formato de resposta</td> 
+                                <td>JSON</td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>Necessário autenticação?</td> 
+                                <td>Não</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Status code</h2>
+                    <p>
+                        <div class="linha"><span class="status-sucesso">200</span> para sucessão do retorno</div>
+                        <span class="status-erro">500</span> erro no servidor
+                    </p>
+
+                    <h2>Parâmetros</h2>
+                    <table>
+                        <thead>
+                            <tr class="tr1">
+                                <td>Nome</td>
+                                <td>Requerido</td>
+                                <td>Descrição</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="tr2">
+                                <td>id</td> 
+                                <td>Requerido</td>
+                                <td>ID do respectivo produto cadastrado</td>
+                            </tr>
+                        </tbody>
+                    </table>         
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
