@@ -14,11 +14,11 @@ import { ProdutosService } from './produtos.service';
     ConfigModule.forRoot(),
     SequelizeModule.forRoot({
       dialect: 'mysql', // dialeto do banco de dados
-      host: 'localhost', // endereço do servidor do banco
+      host: 'sql10.freemysqlhosting.net', // endereço do servidor do banco
       port: 3306, // porta do banco de dados
       username: process.env.USUARIO_BANCO_DADOS, // usuário do MySQL
       password: process.env.SENHA_BANCO_DADOS, // senha do usuário MySQL
-      database: 'produtos', // nome do banco de dados
+      database: 'sql10416905', // nome do banco de dados
       autoLoadModels: true, // flag para definir se os modelos serão carregados automaticamente
       synchronize: true // flag para definir se os modelos serão sincronizados automaticamente
     }),
