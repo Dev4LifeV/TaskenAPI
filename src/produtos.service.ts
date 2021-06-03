@@ -79,7 +79,7 @@ export class ProdutosService {
         return this.produtoModel.findOne(
             {
                 where: {
-                    quantidade: `>= ${quantidade}`,
+                    quantidade: quantidade,
                 },
             }
         );
